@@ -47,6 +47,198 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** Your CSS Below **/
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--clr-paleBlue);
+  font-family: var(--fs-base);
+  font-weight: var(--fw-bold);
+}
+
+.container {
+  box-shadow: 0 20px 40px hsl(234, 85%, 45%, 10%);
+  display: flex;
+  width: 735px;
+  margin: 285px auto;
+  background-color: var(--clr-white);
+  border-radius: 30px;
+}
+
+.result-section,
+.summary-section {
+  width: 50%;
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.2rem 3rem 3rem 3rem;
+  background: linear-gradient(0deg, var(--gra-lightRoyalBlue) 0%, var(--gra-lightSlateBlue) 100%);
+  border-radius: 30px;
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.result-section h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--clr-lightLavender);
+}
+
+.overall-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 12.5rem;
+  height: 12.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(0deg, var(--gra-persianBlue) 0%, var(--gra-violetBlue) 100%);
+  border-radius: 50%;
+}
+
+.overall-score h2 {
+  font-size: 4.5rem;
+  font-weight: var(--fw-black);
+  line-height: 4.5rem;
+}
+
+.overall-score span {
+  font-size: 1.2rem;
+  color: var(--clr-lightLavender);
+}
+
+.result-description h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.result-description p {
+  font-size: 1.1rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.5rem;
+  color: var(--clr-lightLavender);
+}
+
+.summary-section {
+  padding: 2.2rem 2.5rem;
+  color: var(--clr-darkGrayBlue);
+}
+
+.summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 16px;
+  border-radius: 0.8rem;
+  font-size: 1.125rem;
+}
+
+.summary-item.reaction {
+  background-color: hsl(0, 100%, 67%, 5%);
+}
+.summary-item.reaction .summary-item_title {
+  color: var(--clr-lightRed);
+}
+
+.summary-item.memory {
+  background-color: hsl(39, 100%, 56%, 5%);
+}
+.summary-item.memory .summary-item_title {
+  color: var(--clr-orangeYellow);
+}
+
+.summary-item.verbal {
+  background-color: hsl(160, 100%, 40%, 5%);
+}
+.summary-item.verbal .summary-item_title {
+  color: var(--clr-greenTeal);
+}
+
+.summary-item.visual {
+  background-color: hsl(234, 85%, 45%, 5%);
+}
+.summary-item.visual .summary-item_title {
+  color: var(--clr-cobaltBlue);
+}
+
+.summary-item_title {
+  display: flex;
+  gap: 12px;
+}
+
+.summary-item_score {
+  font-weight: var(--fw-black);
+  color: hsl(270, 4%, 63%);
+}
+
+.summary-item_score span {
+  margin: 4px;
+  color: var(--clr-darkGrayBlue);
+}
+
+.btn-continue {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--clr-darkGrayBlue);
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 18px;
+  color: var(--clr-white);
+  text-align: center;
+}
+
+.btn-continue:hover {
+  background-color: hsl(224, 19%, 21%);
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .result-section,
+  .summary-section {
+    width: 100%;
+  }
+
+  .result-section {
+    box-shadow: 0 20px 40px hsl(234, 85%, 45%, 10%);
+    border-radius: 0 0 30px 30px;
+  }
+
+  .overall-score {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .result-description p {
+    font-size: 1.4rem;
+  }
+
+  .summary-items {
+    margin: 1.8rem 0;
+  }
+  .summary-item {
+    font-size: 1.4rem;
+  }
+}
 
 /** Attribution CSS **/
 .attribution { font-size: 11px; text-align: center; }
